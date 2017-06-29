@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<style>
+	body {
+		background-color: #000066 ;
+	}
+	h1 {
+		color : white;
+	}
+	.site {
+		left: 30%;
+		position: relative;
+		top: 100px;
+	}	
+	.shorten {
+		margin-top : 10px;
+		left: 100px;
+		position: relative;
+	}
+	h1 {
+		left: 50px;
+		position: relative;	
+	}
+  .result {
+    font-family: sans-serif;
+    color:yellow;
+    left:50px;
+    font-size: 20px;
+    position: relative ; 
+  }
+	
+</style>
+<body>
+
+      <div class="main-container site">
+        <div class="inner cover">
+          <h1>URL Shortener</h1>
+          <div class="row">
+            <div class="input-group input-group-lg">
+                <input id="url-field" type="text" class="form-control" style="width: 800px;position: relative;left: -200px;
+                border-radius: 10px;" placeholder="Paste a link..." required />
+                <br>
+                <!-- -->
+                  <button class="btn btn-primary shorten" type="button">SHORTEN</button>
+              </div>
+            <div>
+              <div id="link"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="./shorten.js"></script>
+  <script src="javascripts/shorten.js"></script>
+</body>
+</html>
