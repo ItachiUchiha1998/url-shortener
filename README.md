@@ -3,6 +3,11 @@ A simple url shortener microservice which shortens a given link uniquely
 
 Prerequisites : Node , npm and MongoDB installed
 
+# before running the app 
+   init your mongo in terminal by entering following command
+
+     ##    db.counters.insert({ _id: 'url_count', seq: 1 })
+
 to run the app
 
 1. Open app in terminal
