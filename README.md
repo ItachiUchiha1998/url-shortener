@@ -5,7 +5,7 @@ Prerequisites : Node , npm and MongoDB installed
 
 # before running the app 
    init your mongo in terminal by entering following command
-
+	 ##    use url-short
      ##    db.counters.insert({ _id: 'url_count', seq: 1 })
 
 to run the app

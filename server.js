@@ -7,7 +7,9 @@ var host = "http://localhost:3000/";
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/url-short');
+mongoose.connect('mongodb://localhost/url-short', {
+  useMongoClient: true,
+});
 
 app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
@@ -19,7 +21,6 @@ app.get('/',function(req,res) {
 });
 
 app.post('/api/urlshort',function(req,res) {
-	//////////////////////////////
 	var longUrl = req.body.url ;
 	var shortUrl = "";
 	Url.findOne({long_url : longUrl} ,function(err,data) {
@@ -33,7 +34,6 @@ app.post('/api/urlshort',function(req,res) {
 			 newUrl.save(function(err) {
 			 	if (err) { console.log(err);}
 			 	shortUrl = host + urlshortener.shorten(newUrl._id);
-			 	//shortUrl = "check this shit"
 			 	res.send({'shortUrl': shortUrl});
 			 })
 		}
